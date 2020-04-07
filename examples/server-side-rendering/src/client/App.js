@@ -5,6 +5,10 @@ import './main.css'
 
 const A = loadable(() => import('./letters/A'))
 const B = loadable(() => import('./letters/B'))
+
+const Test1 = loadable(() => import('./letters/test-1'))
+const Test2 = loadable(() => import('./letters/test-2'))
+
 const C = loadable(() => import(/* webpackPreload: true */ './letters/C'))
 const D = loadable(() => import(/* webpackPrefetch: true */ './letters/D'))
 const E = loadable(() => import('./letters/E'), { ssr: false })
@@ -30,6 +34,9 @@ const Moment = loadable.lib(() => import('moment'))
 
 const App = () => (
   <div>
+    <Test1 />
+    <br />
+    <Test2 />
     <A />
     <br />
     <B />
